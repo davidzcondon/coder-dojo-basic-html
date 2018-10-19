@@ -4,11 +4,11 @@
 
 1. Create a new folder on the desktop
 2. Create an index.html file in the new folder
-3. Add <html> tags
-4. Add <head> tag inside the html tag.
-5. Add <body> tag inside the html tag. This goes after the head tag.
-6. Add <title> tag inside the head tag. Give the website a title. The text between the two title tags is the website's title.
-7. Add a <h1> heading to the website. The h1 tag needs to go inside the body tag. The text between the h1 tags is the heading.
+3. Add `<html>` tags
+4. Add `<head>` tag inside the html tag.
+5. Add `<body>` tag inside the html tag. This goes after the head tag.
+6. Add `<title>` tag inside the head tag. Give the website a title. The text between the two title tags is the website's title.
+7. Add a `<h1>` heading to the website. The h1 tag needs to go inside the body tag. The text between the h1 tags is the heading.
 8. Add a stylesheet to the website
 
 ## Preview website
@@ -19,8 +19,8 @@
 
 ## How to create a new file
 
-1. Click File->New. This will bring up a blank new file.
-2. Click File->Save As
+1. Click `File->New`. This will bring up a blank new file.
+2. Click `File->Save As`
 3. Type the name of the file in the Save As box.
 4. Now we need to find the folder where to save the file.
 5. Click the desktop at the left of the window.
@@ -29,13 +29,13 @@
 
 ## Make a heading move across the screen
 
-1. Surround the heading tags with <marquee> tags
+1. Surround the heading tags with `<marquee>` tags
 2. For example, `<marquee><h2>Heading</h2></marquee>`
 
 ## How to save a file
 
 1. When there is a circle next to the file name we need to save the file
-2. Click File->Save
+2. Click `File->Save`
 3. Or you can press command and s together
 4. The circle should disappear when you save the file.
 5. You should save after each line
@@ -43,14 +43,14 @@
 ## How to copy and paste text
 
 1. Select the text that you want to copy. It will be highlighted (normally in blue)
-2. Click Edit->Copy
+2. Click `Edit->Copy`
 3. Move the cursor where you want the text to go.
-4. Click Edit->Paste
+4. Click `Edit->Paste`
 
 ## Undo - Fixing a mistake
 
 1. If you make a mistake typing, or if you delete a line by accident, you can fix the mistake using undo.
-2. Click Edit->Undo or press command z
+2. Click `Edit->Undo` or press command z
 
 ## How to add a video
 
@@ -126,22 +126,67 @@
 ## Keyboard Shorcuts
 
 1. Items in the menu ususally have a keyboard shortcut next to them. You can press the shortcut to do the same as clicking on the menu.
-2. File->Save, command s
-3. Edit->Copy, command c
-4. Edit->Paste, command v
-5. Edit->Undo, command z
-6. Edit->Cut, command x
+2. `File->Save`, command s
+3. `Edit->Copy`, command c
+4. `Edit->Paste`, command v
+5. `Edit->Undo`, command z
+6. `Edit->Cut`, command x
 
 ## Unordered Lists
+
 1. Use `<ul></ul>` for unordered lists. These are lists with bullet points instead of numbers
 2. To add an item to the list you add `<li></li>` between the `<ul>` tags. 
 3. Whatever you want to put in the list item goes in between the `<li>` tags.
 
 ## Ordered Lists
+
+1. Use `<ol></ol>` for unordered lists. These are lists with bullet points instead of numbers
+2. To add an item to the list you add `<li></li>` between the `<ol>` tags. 
+3. Whatever you want to put in the list item goes in between the `<li>` tags.
+
 ## Change color using css classes
+
+1. In the css file create a css class with a name. Inside this class add `color: ` and the name of a color. For example
+```css
+.my-colored-text {
+    color: blue
+}
+```
+2. In the html file whatever you add this classname to will have the color blue. You can change the color to whatever you want.
+3. For example to add it to a heading use `<h1 class="my-colored-text">Heading Text</h1>"`
+4. For example to add it to a paragraph use `<p class="my-colored-text">blah blah blah<p>`
+5. You can also change other things about the text here e.g. you can change the font size by adding `font-size: 36px;` to the css class e.g.
+```css
+.my-colored-text {
+    color: blue;
+    font-size: 36px;
+}
+```
+
 ## Change color using li:hover
+
+1. You can change the color of the text if you hover over a list item by using the `li:hover` class. For example
+```css
+li:hover {
+    color: turquoise
+}
+```
+2. This will change the color of the text to turquoise when you hover over it with the mouse.
+3. When you move the mouse away, the text will go back to its original color.
+
 ## Change color using li:active
+
+1. You can change the color of the text for as long as you click on a list item by using the `li:active` class. For example
+```css
+li:active {
+    color: gray;
+}
+```
+2. This will change the color of the text to gray when you click on it with the mouse.
+3. When you stop holding down the mouse button, the text will go back to its original color.
+
 ## Link to second webpage
+
 1. To link to a second webpage we use the `<a>` tags.
 2. Add `<a href="index2.html">TEXT</a>` to the webpage
 3. Replace the index2.html with the address of the website you want to go to
