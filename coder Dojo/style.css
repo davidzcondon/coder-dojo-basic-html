@@ -1,0 +1,22 @@
+p {
+    color: #ECFF00;
+    font-size: 72px;
+    font-family: 'Basic Sans SF';
+}
+
+.minecraft {
+    color: turquoise
+}
+
+html {
+    /*background-color: #E3234359;*/
+    background: url(England-ukraine1-b1.jpg)
+}
+
+li:hover {
+    color: turquoise
+}
+
+li:active {
+    color: gray;
+}
