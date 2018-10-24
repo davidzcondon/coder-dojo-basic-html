@@ -90,6 +90,12 @@
 2. Inside the curly brackets add `background-color: color;`
 3. Replace the cork color with either a colour name e.g. blue or a hex number from the color picker
 
+## How to set the background image
+
+1. Add a tag for html if there isn't one already. Add `html { }`
+2. Inside the curly brackets add `background: url(image-name);`
+3. Replace image-name with the name of your image. Don't forget the `.jpg` or `.png`.
+
 ## How to change the color of a Heading
 
 1. Add a tag for h1 or whichever tag you want to change e.g. `h1 { }`
@@ -102,6 +108,11 @@
 2. Inside the tag add `font-size: 36px;`
 3. Replace the 36 with the size in pixels that you want. Bigger numbers make the text bigger and smaller numbers make the text smaller.
 
+## To change the type of font
+
+1. Add the tag if it is not there already e.g. `h1 { }` or `p { }`
+2. Inside the tag add `font-family: type`
+3. Replace the word type with the type of font you wish to use. Examples are `sans-serif`, `serif`
 
 ## Tables
 

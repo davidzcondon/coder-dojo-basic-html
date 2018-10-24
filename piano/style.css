@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+table,
+p,
+a,
+li {
+    font-family: sans-serif
+}
+
+html {
+    background: url(piano-background.jpg);
+    background-size: cover;
+}
+
+li:hover,
+td:hover,
+th:hover {
+    color: blue
+}
+
+li:active,
+td:active,
+th:active {
+    color: red
+}
