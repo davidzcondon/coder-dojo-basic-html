@@ -204,6 +204,10 @@ li:active {
 4. Replace the TEXT with the text of the link that you want to show
 5. For example to link to youtube you could add `<a href="www.youtube.com">Go To Youtube!!!</a>`
 
+## How to align an image to the right
+## How to break a newline
+## How to draw a horizontal line
+
 ## Website for Presentation
 
 The website will be required to be created by some time in December. It must contain the following items.

@@ -13,10 +13,14 @@ html {
     background: url(England-ukraine1-b1.jpg)
 }
 
-li:hover {
+li,
+td,
+th:hover {
     color: turquoise
 }
 
-li:active {
-    color: gray;
+li,
+td,
+th:active {
+    color: gray
 }
