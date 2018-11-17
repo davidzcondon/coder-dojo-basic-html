@@ -8,6 +8,10 @@ li {
     font-family: sans-serif
 }
 
+p {
+    color: red
+}
+
 html {
     background-color: lightgray
 }
