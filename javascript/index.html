@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+    david_name = "David"
+    david_age = 5
+    david_greeting = "Hello " + david_name + ". You are " + david_age + " years old."
+    david_goodbye = "Goodbye " + david_name + ". You are a good boy"
+
+    function sayHelloDavid() {
+        alert(david_greeting)
+        console.log(david_greeting)
+    }
+
+    function sayGoodbyeDavid() {
+        alert(david_goodbye)
+    }
+    
+    function sayHello() {
+        name = document.getElementById("input_name").value
+        age = document.getElementById("input_age").value
+        greeting = "Hello " + name + ". You are " + age + " years old."
+        alert(greeting)
+    }
+
+    function sayGoodbye() {
+        name = document.getElementById("input_name").value
+        goodbye = "Goodbye " + name + ". You are a good boy"
+        alert(goodbye)
+    }
+</script>
+
+<body>
+    <h1>Javascript</h1>
+    <p>This is my website for learning Javascript.</p>
+
+
+    <button onclick="sayHelloDavid()">Say Hello David</button>
+    <button onclick="sayGoodbyeDavid()">Say Goodbye David</button>
+    <hr>
+
+    Name:
+    <input type=text id="input_name">
+    Age:
+    <input type=number id="input_age">
+
+    <br>
+    <button onclick="sayHello()">Say Hello</button>
+    <button onclick="sayGoodbye()">Say Goodbye</button>
+</body>
+
+</html>
