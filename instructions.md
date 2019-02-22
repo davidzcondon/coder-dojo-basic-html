@@ -3,13 +3,13 @@
 ## How to start a new website
 
 1. Create a new folder on the desktop
-2. Create an index.html file in the new folder
+2. Create [an index.html file in the new folder](#how-to-create-a-new-file)
 3. Add `<html>` tags
 4. Add `<head>` tag inside the html tag.
 5. Add `<body>` tag inside the html tag. This goes after the head tag.
 6. Add `<title>` tag inside the head tag. Give the website a title. The text between the two title tags is the website's title.
 7. Add a `<h1>` heading to the website. The h1 tag needs to go inside the body tag. The text between the h1 tags is the heading.
-8. Add a stylesheet to the website
+8. Add a [stylesheet to the website](#how-to-add-a-stylesheet-to-a-website)
 
 ## Preview website
 
