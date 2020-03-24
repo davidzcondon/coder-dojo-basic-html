@@ -34,3 +34,4 @@
 
 * `TypeError: 'str' object is not callable` - You forgot a plus between two strings and the second string has brackets around it.
 * `Syntax Error` - for strings maybe you forgot a plus somewhere
+* `TypeError: 'NoneType' object is not callable` - You have an extra closing bracket `)` in the middle of the string
