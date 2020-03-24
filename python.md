@@ -30,3 +30,7 @@
 * A variable has a value which is the thing stored in the variable. The value can be changed to another value later.
 * We use the `=`sign to store something in a variable e.g. `davids_age = 7`
 
+## Errors
+
+* `TypeError: 'str' object is not callable` - You forgot a plus between two strings and the second string has brackets around it.
+* `Syntax Error` - for strings maybe you forgot a plus somewhere
