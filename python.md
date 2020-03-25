@@ -39,7 +39,13 @@
 
 ## Lists
 
-
+* A list can contain a number of items (or elements). There is no limit to the number of items (unless you run out of memory).
+* You can have an empty list e.g. `transformers = []`
+* You can create a list using `transformers = ["Megatron", "Optimus Prime", "Soundwave", "Thundercracker"]`
+* You can get the length of the list using the `len` function e.g. `number_transformers = len(transformers)`
+* List numbering starts from 0 so to get the first item in a list you use `first = transformers[0]`. You can get the 3rd item of a list using `transformers[2]`.
+* If you try to get an index in the list that is larger than the size of the list you get a `list index out of range error`.
+* To change an item in the list you use the index and assign a new value to it e.g. `transformer[1] = "unicron"`
 
 ## Errors
 
@@ -47,3 +53,5 @@
 * `Syntax Error` - for strings maybe you forgot a plus somewhere
 * `TypeError: 'NoneType' object is not callable` - You have an extra closing bracket `)` in the middle of the string
 * `TypeError: can only concatentate str (not "list") to str` - You can only join a string to a string. You are missing a call to `str` for one of the variables you are printing
+* `list index out of range error`. You tried to access an item in the list that isn't there e.g. access the sixth element of a list which only contains three elements.
+* `NameError: name 'something' is not defined`. The variable `something` is not defined. Either you forgot to define it or you meant it to be a string and you forgot the quotes around the string
