@@ -28,7 +28,13 @@
 * A variable has a name which can be used later to refer to the variable
 * A variable has a type which tells us what is stored in the variable e.g. integer, string
 * A variable has a value which is the thing stored in the variable. The value can be changed to another value later.
-* We use the `=`sign to store something in a variable e.g. `davids_age = 7`
+* We use the `=`sign to store something in a variable e.g. `davids_age = 7`. After this the variable has the value 7.
+* You can change the value stored in a variable by putting a new value in there e.g. after `davids_age = 8`, now the variable has the value 8.
+
+## Input
+
+* To ask the user a question we use the `input` function. This will print out a question to the screen, get the response from the user and put it in a variable.
+* For example `name = input("What is your name? "). Whatever the user types in will be stored in the variable called `name`.
 
 ## Errors
 
