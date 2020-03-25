@@ -34,10 +34,16 @@
 ## Input
 
 * To ask the user a question we use the `input` function. This will print out a question to the screen, get the response from the user and put it in a variable.
-* For example `name = input("What is your name? "). Whatever the user types in will be stored in the variable called `name`.
+* For example `name = input("What is your name? ")`. Whatever the user types in will be stored in the variable called `name`.
+* The `input` function returns a string. Even if the user types in a number it will be stored as a string variable.
+
+## Lists
+
+
 
 ## Errors
 
 * `TypeError: 'str' object is not callable` - You forgot a plus between two strings and the second string has brackets around it.
 * `Syntax Error` - for strings maybe you forgot a plus somewhere
 * `TypeError: 'NoneType' object is not callable` - You have an extra closing bracket `)` in the middle of the string
+* `TypeError: can only concatentate str (not "list") to str` - You can only join a string to a string. You are missing a call to `str` for one of the variables you are printing
