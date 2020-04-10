@@ -47,6 +47,13 @@
 * If you try to get an index in the list that is larger than the size of the list you get a `list index out of range error`.
 * To change an item in the list you use the index and assign a new value to it e.g. `transformer[1] = "unicron"`
 
+## Libraries
+
+* We can use other people's code in our programs. They give their code to us in libraries.
+* We can install the library on our system using `pip install library-name`.
+* To use the library in our code we can use `import library-name` for the whole library
+* Or for a part of the library we can use `from library-name import component-name`
+
 ## Errors
 
 * `TypeError: 'str' object is not callable` - You forgot a plus between two strings and the second string has brackets around it.
