@@ -63,6 +63,7 @@ for device in devices:
 * It has lots of `attributes` or `properties`
 * You can call `methods` on an object to get it to do something e.g. return its name or update one of its attributes.
 * If we had an object called `david` and it had a property called `name`, we could use this in our code with `david.name`
+* `None` is a special object. Any variable can be set to `None`. It means that the obejct is empty.
 
 ## Conditionals
 
@@ -73,6 +74,15 @@ for device in devices:
 if device.name == "test":
     print (device.name)    ## <--- This will only be executed if the condition in the previous line is True
 ```
+* If we want to do something when the conditional is False we use an `else` statement
+```
+    if device.name == "Microsoft X-Box 360 pad":
+        print("We found an X-Box controller. Using this!") # <-- If it condition is True we come in here
+        xbox_controller = device
+    else:
+        print("Found " + device.name + ". Skipping!") # <-- If it condition is False we come in here
+```
+* Only one of the `if` or `else` block will be executed at any one time. Both can't be executed for the same condition.
 
 ## Libraries
 
