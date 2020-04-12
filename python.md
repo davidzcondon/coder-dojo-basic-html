@@ -83,6 +83,7 @@ if device.name == "test":
         print("Found " + device.name + ". Skipping!") # <-- If it condition is False we come in here
 ```
 * Only one of the `if` or `else` block will be executed at any one time. Both can't be executed for the same condition.
+* You can use `None` is a comparision to check if an object is set e.g. `xbox_controller == None`
 
 ## Libraries
 
@@ -99,6 +100,10 @@ if device.name == "test":
 * `TypeError: can only concatentate str (not "list") to str` - You can only join a string to a string. You are missing a call to `str` for one of the variables you are printing
 * `list index out of range error`. You tried to access an item in the list that isn't there e.g. access the sixth element of a list which only contains three elements.
 * `NameError: name 'something' is not defined`. The variable `something` is not defined. Either you forgot to define it or you meant it to be a string and you forgot the quotes around the string
+
+## Built-in Functions
+
+* To exit the program we use `exit("Text to tell the user why we're exiting")`
 
 ## Terminal
 
