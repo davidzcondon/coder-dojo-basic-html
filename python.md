@@ -112,6 +112,7 @@ if device.name == "test":
 * Each function has a name
 * Each function can take in arguments. These are values that we pass to the function from where we call it.
 * Functions can return values back to where they were called from
+* The code in a function does nothing until it is called
 * An example of a function is
 ```
 def print_name(name):
@@ -143,3 +144,8 @@ If called with `n = full_name("David", "Condon")`, what would the value of n be?
 * The terminal is case-sensititve. That means that the capital letters matter so that a folder named `music` is different from a folder named `Music`
 * The terminal does auto complete for filenames. Pressing tab will complete the name if it can.
 * You can use the `up arrow` and `down arrow` to go through the previous commands.
+
+## Refactoring
+
+* If we see a number repeated in the function, we should create a variable for it and replace all instances of it with the variable name. Also it might become an argument later.
+* If we see the same lines repeated we should move them to a function of their own and just call it a few times
