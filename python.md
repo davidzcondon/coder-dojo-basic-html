@@ -56,6 +56,11 @@ for device in devices:
     print (device)    ## <--- This is the loop body 
 ```
 * This will go through the list and put the current item in the `device` variable. It will start at the first item in the list. It will run the code in the loop body using that value of device. Then it will move onto the next item in the list and run the loop body until all the items in the list have been used.
+* We can use for loops to run code multiple times e.g. to run a line 4 times use
+```
+for i in range (0,4):
+    print("stuff")
+```
 
 ## Object
 
@@ -99,7 +104,7 @@ if device.name == "test":
 * `TypeError: 'NoneType' object is not callable` - You have an extra closing bracket `)` in the middle of the string
 * `TypeError: can only concatentate str (not "list") to str` - You can only join a string to a string. You are missing a call to `str` for one of the variables you are printing
 * `list index out of range error`. You tried to access an item in the list that isn't there e.g. access the sixth element of a list which only contains three elements.
-* `NameError: name 'something' is not defined`. The variable `something` is not defined. Either you forgot to define it or you meant it to be a string and you forgot the quotes around the string
+* `NameError: name 'something' is not defined`. The variable `something` is not defined. Either you forgot to define it or you meant it to be a string and you forgot the quotes around the string. This could also be calling a function before it is defined.
 
 ## Functions
 
@@ -119,6 +124,8 @@ def full_name(first_name, last_name):
     return first_name + " " + last_name
 ```
 If called with `n = full_name("David", "Condon")`, what would the value of n be? `"David Condon"`
+* Functions need to be defined before they are called
+* A function can help us reduce the amount of code we write as if we are doing the same thing more than once we just call the function again instead of copying the code
 
 ## Built-in Functions
 
