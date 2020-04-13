@@ -101,6 +101,25 @@ if device.name == "test":
 * `list index out of range error`. You tried to access an item in the list that isn't there e.g. access the sixth element of a list which only contains three elements.
 * `NameError: name 'something' is not defined`. The variable `something` is not defined. Either you forgot to define it or you meant it to be a string and you forgot the quotes around the string
 
+## Functions
+
+* We can create a function to move code to a separate area. When we call this function, we jump to that area, run the code in the function and then return back to where we were.
+* Each function has a name
+* Each function can take in arguments. These are values that we pass to the function from where we call it.
+* Functions can return values back to where they were called from
+* An example of a function is
+```
+def print_name(name):
+    print(name)
+```
+This is called by e.g. `print_name("test")` which would print out `test` to the screen. We can call it with different arguments each time e.g. `print_name("david")` would print `david`.
+* An example of a function that returns a value is
+```
+def full_name(first_name, last_name):
+    return first_name + " " + last_name
+```
+If called with `n = full_name("David", "Condon")`, what would the value of n be? `"David Condon"`
+
 ## Built-in Functions
 
 * To exit the program we use `exit("Text to tell the user why we're exiting")`
