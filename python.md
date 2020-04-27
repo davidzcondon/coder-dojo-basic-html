@@ -95,6 +95,7 @@ if device.name == "test":
 * We can use other people's code in our programs. They give their code to us in libraries.
 * We can install the library on our system using `pip install library-name`.
 * To use the library in our code we can use `import library-name` for the whole library
+* We can use `import *` to import the whole library e.g. `from library-name import *`
 * Or for a part of the library we can use `from library-name import component-name`
 
 ## Errors
@@ -149,3 +150,11 @@ If called with `n = full_name("David", "Condon")`, what would the value of n be?
 
 * If we see a number repeated in the function, we should create a variable for it and replace all instances of it with the variable name. Also it might become an argument later.
 * If we see the same lines repeated we should move them to a function of their own and just call it a few times
+
+## GUIs using Tkinter
+
+* We can create a GUI using a built in Python library Tkinter.
+* We create a window using `tk = Tk()`
+* We can add a Canvas object to the window to allow us to draw on it e.g. `canvas = Canvas(tk, width=500, height=500)`
+* We can create a line using the `create_line` function e.g. `canvas.create_line(start_x, start_y, end_x, end_y)`
+* We can create a rectangle using the `create_rectangle` function e.g. `canvas.create_rectangle(top_left_x, top_left_y, bottom_right_x, bottom_right_y)`
