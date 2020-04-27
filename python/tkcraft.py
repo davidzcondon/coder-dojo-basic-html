@@ -26,7 +26,7 @@ def create_rectangle(canvas, point1, point2):
 	return canvas.create_rectangle(point1.x, point1.y, point2.x, point2.y)
 
 def create_rectangle_wh(canvas, point1, width, height, color="black"):
-	rect = canvas.create_rectangle(point1.x, point1.y, point1.x + width, point1.y + height, outline=color)
+	return canvas.create_rectangle(point1.x, point1.y, point1.x + width, point1.y + height, outline=color)
 	
 logging.basicConfig(level=logging.DEBUG)
 
@@ -46,59 +46,81 @@ START_GRID_X = 50
 START_GRID_Y = 50
 
 def draw_row(point, num_boxes):
+	boxes = []
 	for i in range (0, num_boxes):
-		create_rectangle_wh(canvas, point, BOX_WIDTH, BOX_HEIGHT)
+		box = create_rectangle_wh(canvas, point, BOX_WIDTH, BOX_HEIGHT)
+		boxes.append(box)
 		point = point.right(BOX_WIDTH)
+	return boxes
 
 def draw_grid(point, num_rows, num_boxes_in_row):
 	logging.debug("Drawing Grid")
+	rows = []
 	for i in range (0, num_rows):
 		logging.debug("Drawing Row " + str(i))
-		draw_row(point, num_boxes_in_row)
+		row = draw_row(point, num_boxes_in_row)
+		rows.append(row)
 		point = point.down(BOX_HEIGHT)
+	return rows
 
-draw_grid(Point(START_GRID_X, START_GRID_Y), NUM_ROWS, NUM_BOXES_IN_ROW)
+grid = draw_grid(Point(START_GRID_X, START_GRID_Y), NUM_ROWS, NUM_BOXES_IN_ROW)
 
 
 def move(event):
 	global current_position
+	global grid
+
 	logging.debug("Entering Move Function " + str(event))
+
 	if event.keysym == 'Up':
-		pass
+		current_position = Point(current_position.x, current_position.y - 1)		
+		if current_position.y == -1:
+			current_position.y = NUM_ROWS - 1			
+		draw_selected_box_in_grid(grid, current_position)
 	elif event.keysym == 'Down':
-		draw_normal_box_in_grid(current_position)
+		draw_normal_box_in_grid(grid, current_position)
 		current_position = Point(current_position.x, current_position.y + 1)		
 		if current_position.y == NUM_ROWS:
 			current_position.y = 0			
-		draw_selected_box_in_grid(current_position)
+		draw_selected_box_in_grid(grid, current_position)
 	elif event.keysym == 'Left':
-		pass
+		draw_normal_box_in_grid(grid, current_position)
+		current_position = Point(current_position.x - 1, current_position.y)		
+		if current_position.x == -1:
+			current_position.x = NUM_BOXES_IN_ROW - 1			
+		draw_selected_box_in_grid(grid, current_position)
 	else:
-		pass
+		draw_normal_box_in_grid(grid, current_position)
+		current_position = Point(current_position.x + 1, current_position.y)		
+		if current_position.x == NUM_BOXES_IN_ROW:
+			current_position.x = 0			
+		draw_selected_box_in_grid(grid, current_position)
 
 
-def draw_box_in_grid(position, color):
-	point = Point(START_GRID_X + position.x * BOX_WIDTH, START_GRID_Y + position.y * BOX_HEIGHT)
-	rect = create_rectangle_wh(canvas, point, BOX_WIDTH, BOX_HEIGHT, color="orange")
-	logging.debug("draw_box_in_grid rect = " + str(rect))
+def draw_box_in_grid(grid, position, color):
+	logging.debug("draw_box_in_grid position = " + str(position))
+	row = grid[position.y]
+	box = row[position.x]
+	canvas.itemconfig(box, outline=color)
+	canvas.lift(box, "all")
 
 
-	canvas.lift(rect)
-
-def draw_selected_box_in_grid(position):
+def draw_selected_box_in_grid(grid, position):
 	logging.debug("draw_selected_box_in_grid " + str(position))
-	draw_box_in_grid(position, color="orange")
+	draw_box_in_grid(grid, position, color="red")
 
-def draw_normal_box_in_grid(position):
+
+def draw_normal_box_in_grid(grid, position):
 	logging.debug("draw_normal_box_in_grid " + str(position))
-	draw_box_in_grid(position, color="black")
+	draw_box_in_grid(grid, position, color="black")
 
-draw_selected_box_in_grid(current_position)
 
-#canvas.bind_all('<KeyPress-Up>', movetriangle)
+draw_selected_box_in_grid(grid, current_position)
+
+canvas.bind_all('<KeyPress-Up>', move)
 canvas.bind_all('<KeyPress-Down>', move)
-#canvas.bind_all('<KeyPress-Left>', movetriangle)
-#canvas.bind_all('<KeyPress-Right>', movetriangle)
+canvas.bind_all('<KeyPress-Left>', move)
+canvas.bind_all('<KeyPress-Right>', move)
 
 logging.debug("Entering Mainloop Function")
 tk.mainloop()
