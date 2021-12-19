@@ -7,3 +7,6 @@ You can use repositories as a place to store the code to build a website. Github
 
 ### Readme
 This is a document which contains a description of what the repository is. It can also contain instructions to build the project etc.
+
+### Pages
+To serve out the repository as a website, go to the settings->pages tab. Select source to be the master branch. This will serve out the repository as a html website. To create a Jekyll website follow [these instructions](https://nicolas-van.github.io/easy-markdown-to-github-pages/)
